@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    background: black;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background: url("images/notebook.jpg");
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-duration: 2s;
+    -moz-animation-fill-mode: both;
+    -moz-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-moz-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.content{
+    padding: 20px 0 25px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-wrapper {
+    background: rgba(0,0,0, 0.7);
+    width: 100%;
+    color: #fff;
+    position: relative;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: showLeft;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: showLeft;
+    animation: showLeft 1s;
+    z-index: 1;
+}
+
+#mail, #telegram, #hh, #git{
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-size: 22px;
+    color: #38a6db;
+    margin-left: 5px;
+}
+
+@-moz-keyframes showLeft{
+    from {left:-100%;} to {left:0;}
+}
+@-webkit-keyframes showLeft{
+    from {left:-100%;} to {left:0;}
+}
+@keyframes showLeft {
+    from {left:-100%;} to {left:0;}
+}
+
+.info {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1em;
+    border-top: 1px white double;
+    border-bottom: 1px white double;
+    padding: 10px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    -moz-animation-duration: 3s;
+    -moz-animation-name: show;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name: show;
+    animation: show 3s;
+}
+
+
+.info span {
+    color: #e3db71;
+}
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.bordered {
+    border: 1px white solid;
+    min-width: 330px;
+    padding: 5px;
+    margin: 10px;
+}
+.bordered a {
+    color: #5ec476;
+}
+
+.contacts {
+    display: flex;;
+    flex-direction: column;
+    align-items: center;
+}
+
+@-webkit-keyframes show {
+    from {opacity: 0;} to {opacity: 1;}
+}
+@keyframes show {
+    from {opacity: 0;} to {opacity: 1;}
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .info {
+        font-size: 1.1em;
+    }
+    .bordered {
+        width: 100%;
+    }
+}
